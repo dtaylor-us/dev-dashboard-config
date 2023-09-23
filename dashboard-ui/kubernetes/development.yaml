@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: derektaylor/dashboard-ui:0.1.0-771021b
+          image: derektaylor/dashboard-ui:0.1.0-6d77add
           ports:
             - containerPort: 80
