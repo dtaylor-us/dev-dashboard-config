@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: github-service
-          image: derektaylor/github-service:0.1.1
+          image: derektaylor/github-service:0.1.2-8d4bdf2
           ports:
             - containerPort: 8080
           livenessProbe:
