@@ -29,3 +29,15 @@ spec:
               port: 8080
             initialDelaySeconds: 5
             periodSeconds: 5
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+          env:
+            - name: QUARKUS_PROFILE
+              value: prod
+            - name: QUARKUS_CONFIG_PROFILE_PARENT_DIR
+              value: /etc/config
+      volumes:
+        - name: config-volume
+          configMap:
+            name: github-service-config
